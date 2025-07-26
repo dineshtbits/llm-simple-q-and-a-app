@@ -7,7 +7,7 @@ openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
 
 def generate_response(input_text):
-    model = ChatOpenAI(temperature=0.7, api_key=openai_api_key)
+    model = ChatOpenAI(temperature=0.7, api_key=openai_api_key, model="gpt-4o" )
     st.info(model.invoke(input_text))
 
 with st.form("my_form"):
